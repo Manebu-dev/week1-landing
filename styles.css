@@ -1,0 +1,149 @@
+/* === БАЗОВЫЙ СБРОС === */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Плавный скролл для якорных ссылок */
+  scroll-behavior: smooth;
+  /* Защита от случайных горизонтальных скроллов */
+  overflow-x: hidden;
+}
+
+body {
+  /* Минимальная высота на весь экран (пригодится для футера внизу) */
+  min-height: 100vh;
+  /* Удобочитаемый шрифт по умолчанию (антиалиасинг) */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Сброс жирности (браузеры иногда добавляют bold на body) */
+  font-weight: normal;
+  /* Чтобы проценты у изображений считались корректно */
+  overflow-x: hidden;
+}
+
+/* Типографский минимум */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Убираем стандартные стили у списков */
+ul, ol {
+  list-style: none;
+}
+
+/* Ссылки без подчеркивания (если это общая концепция) */
+a {
+  text-decoration: none;
+  color: inherit; /* наследует цвет текста */
+}
+
+/* Изображения, видео и иконки как блочные элементы */
+img, svg, video, canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Наследование шрифтов для элементов форм (часто забывают) */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Убираем стандартную обводку при клике, но оставляем для доступности (клавиатуры) */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Если не нужна совсем — закомментируйте строку выше и раскомментируйте следующую: */
+/* :focus { outline: none; } */
+
+/* Кнопки без стандартного вида */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: inherit;
+}
+
+/* Убираем возможность растягивать textarea */
+textarea {
+  resize: vertical; /* или none, если совсем не нужно */
+}
+
+/* Таблицы */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* цвета и прочее */
+
+:root {
+
+    /* цвета фона */
+    --color-background1: #F7F4EB;
+    --color-background2: #0D1F08;
+    
+
+}
+
+
+/*== Секция стилей текста ==*/
+
+.hero-display {
+  
+}
+
+.display-1 {
+
+}
+
+.display-2 {
+
+}
+
+.display-3 {
+
+}
+
+.header-1 {
+
+}
+
+.header-2 {
+
+}
+.header-3 {
+
+}
+
+.paragraph1 {
+
+}
+
+.paragraph-2 {
+
+}
+
+.paragraph-3 {
+
+}
+
+.buttonText {
+
+}
+
+.linkText {
+
+}
+
+/*== Секция стилей цвета ==*/
+
