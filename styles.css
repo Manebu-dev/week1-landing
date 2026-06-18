@@ -27,31 +27,44 @@ body {
 }
 
 /* Типографский минимум */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: inherit;
 }
 
 /* Убираем стандартные стили у списков */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
 /* Ссылки без подчеркивания (если это общая концепция) */
 a {
   text-decoration: none;
-  color: inherit; /* наследует цвет текста */
+  color: inherit;
+  /* наследует цвет текста */
 }
 
 /* Изображения, видео и иконки как блочные элементы */
-img, svg, video, canvas {
+img,
+svg,
+video,
+canvas {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
 /* Наследование шрифтов для элементов форм (часто забывают) */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
   color: inherit;
 }
@@ -75,7 +88,8 @@ button {
 
 /* Убираем возможность растягивать textarea */
 textarea {
-  resize: vertical; /* или none, если совсем не нужно */
+  resize: vertical;
+  /* или none, если совсем не нужно */
 }
 
 /* Таблицы */
@@ -88,10 +102,25 @@ table {
 
 :root {
 
-    /* цвета фона */
-    --color-background1: #F7F4EB;
-    --color-background2: #0D1F08;
-    
+  /*== Секция стилей цвета ==*/
+
+  /* цвета фона */
+  --color-background1: #F7F4EB;
+  --color-background2: #0D1F08;
+  --color-background3: #1F0808;
+
+  /* цвета текста */
+  --color-paragraphColor1: #000000;
+  --color-paragraphColor2: #FFFFFF;
+
+  /* цвета display (посмотреть где применяются) */
+  --color-display1: #F2F2F2;
+  --color-display2: #FFFFFF;
+  --color-display3: #F7F4EB;
+  --color-display4: #000000;
+
+  /* цвет Accent */
+  --color-accent: #31110F;
 
 }
 
@@ -99,51 +128,143 @@ table {
 /*== Секция стилей текста ==*/
 
 .hero-display {
-  
+  font-weight: 400;
+  font-size: 160px;
+  letter-spacing: -0,03em;
+  line-height: 95%;
+
 }
 
 .display-1 {
-
+  font-weight: 200;
+  font-size: 400px;
+  letter-spacing: -0,05em;
+  line-height: 109%;
 }
 
 .display-2 {
-
+  font-weight: 400;
+  font-size: 160px;
+  letter-spacing: -0,03em;
+  line-height: 95%;
 }
 
 .display-3 {
-
+  font-weight: 400;
+  font-size: 160px;
+  letter-spacing: -0,03em;
+  line-height: 95%;
 }
 
 .header-1 {
-
+  font-weight: 400;
+  font-size: 160px;
+  letter-spacing: -0,03em;
+  line-height: 95%;
 }
 
 .header-2 {
-
+  font-weight: 400;
+  font-size: 160px;
+  letter-spacing: -0,03em;
+  line-height: 95%;
 }
-.header-3 {
 
+.header-3 {
+  font-weight: 400;
+  font-size: 160px;
+  letter-spacing: -0,03em;
+  line-height: 95%;
 }
 
 .paragraph1 {
-
+  font-weight: 400;
+  font-size: 160px;
+  letter-spacing: -0,03em;
+  line-height: 95%;
 }
 
 .paragraph-2 {
-
+  font-weight: 400;
+  font-size: 160px;
+  letter-spacing: -0,03em;
+  line-height: 95%;
 }
 
 .paragraph-3 {
-
+  font-weight: 400;
+  font-size: 160px;
+  letter-spacing: -0,03em;
+  line-height: 95%;
 }
 
 .buttonText {
-
+  font-weight: 400;
+  font-size: 160px;
+  letter-spacing: -0,03em;
+  line-height: 95%;
 }
 
 .linkText {
-
+  font-weight: 400;
+  font-size: 160px;
+  letter-spacing: -0,03em;
+  line-height: 95%;
 }
 
-/*== Секция стилей цвета ==*/
+@media (max-width: 1279) {
 
+/*адаптив для текстовых стилей*/
+.hero-display {  font-size: 96px;}
+
+.display-1 {font-size: 266px;}
+
+.display-2 {}
+
+.display-3 {}
+
+.header-1 {}
+
+.header-2 {}
+
+.header-3 {}
+
+.paragraph1 {}
+
+.paragraph-2 {}
+
+.paragraph-3 {}
+
+.buttonText {}
+
+.linkText {}
+}
+
+@media (max-width: 799px) {
+
+/*адаптив для текстовых стилей*/
+.hero-display {  font-size: 48px;}
+
+.display-1 {font-size: 133px;}
+
+.display-2 {}
+
+.display-3 {}
+
+.header-1 {}
+
+.header-2 {}
+
+.header-3 {}
+
+.paragraph1 {}
+
+.paragraph-2 {}
+
+.paragraph-3 {}
+
+.buttonText {}
+
+.linkText {}
+}
+}
