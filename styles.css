@@ -150,121 +150,138 @@ table {
 }
 
 .display-3 {
-  font-weight: 400;
-  font-size: 160px;
-  letter-spacing: -0,03em;
+  font-weight: 500;
+  font-size: 101px;
+  letter-spacing: -0,06em;
   line-height: 95%;
 }
 
 .header-1 {
-  font-weight: 400;
-  font-size: 160px;
-  letter-spacing: -0,03em;
-  line-height: 95%;
+  font-weight: 500;
+  font-size: 42px;
+  letter-spacing: -0,05em;
+  line-height: 109%;
 }
 
 .header-2 {
   font-weight: 400;
-  font-size: 160px;
-  letter-spacing: -0,03em;
-  line-height: 95%;
+  font-size: 32px;
+  letter-spacing: -0,05em;
+  line-height: 109%;
 }
 
 .header-3 {
-  font-weight: 400;
-  font-size: 160px;
-  letter-spacing: -0,03em;
-  line-height: 95%;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: -0,02em;
+  line-height: 135%;
 }
 
 .paragraph1 {
   font-weight: 400;
-  font-size: 160px;
-  letter-spacing: -0,03em;
-  line-height: 95%;
+  font-size: 42px;
+  letter-spacing: -0,05em;
+  line-height: 109%;
 }
 
 .paragraph-2 {
   font-weight: 400;
-  font-size: 160px;
-  letter-spacing: -0,03em;
-  line-height: 95%;
+  font-size: 24px;
+  letter-spacing: -0,02em;
+  line-height: 135%;
 }
 
 .paragraph-3 {
   font-weight: 400;
-  font-size: 160px;
-  letter-spacing: -0,03em;
-  line-height: 95%;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 140%;
 }
 
 .buttonText {
   font-weight: 400;
-  font-size: 160px;
-  letter-spacing: -0,03em;
-  line-height: 95%;
+  font-size: 24px;
+  letter-spacing: -0,02em;
+  line-height: 120%;
 }
 
 .linkText {
   font-weight: 400;
-  font-size: 160px;
+  font-size: 17px;
   letter-spacing: -0,03em;
   line-height: 95%;
+  color: var(--color-paragraphColor2);  /* ПРОВЕРИТЬ потом, может у 
+  других ссылок другие цвета */
 }
 
 @media (max-width: 1279) {
 
 /*адаптив для текстовых стилей*/
-.hero-display {  font-size: 96px;}
+.hero-display {font-size: 96px;}
 
 .display-1 {font-size: 266px;}
 
-.display-2 {}
+.display-2 {font-size: 112px;}
 
-.display-3 {}
+.display-3 {font-size: 85px;}
 
-.header-1 {}
-
-.header-2 {}
-
-.header-3 {}
-
-.paragraph1 {}
-
-.paragraph-2 {}
-
-.paragraph-3 {}
-
-.buttonText {}
-
-.linkText {}
+.header-2 {font-size: 26px;}
 }
 
 @media (max-width: 799px) {
 
 /*адаптив для текстовых стилей*/
-.hero-display {  font-size: 48px;}
+.hero-display {font-size: 48px;}
 
 .display-1 {font-size: 133px;}
 
-.display-2 {}
+.display-2 {font-size: 112px;}
 
-.display-3 {}
+.display-3 {font-size: 48px;} /* одно свойство надо будет задать через маргин,
+смотреть в стиле текста на мобилке */
 
-.header-1 {}
+.header-1 {font-size: 29px;}
 
-.header-2 {}
+.header-2 {font-size: 26px;}
 
-.header-3 {}
-
-.paragraph1 {}
-
-.paragraph-2 {}
-
-.paragraph-3 {}
-
-.buttonText {}
-
-.linkText {}
+.paragraph1 {font-size: 29px;}
 }
+
+/* КОМПОНЕНТЫ САЙТА включая шапку и тд*/
+
+.header {
+  background-image: url();
+  width: 100%;
+  height: auto; /* может надо будет поменять */
+  display: flex;
+}
+
+.header-contents { /* очень аккуратно надо будет проверить */
+  position: fixed;
+  width: 100%;
+  background-color: var(--color-background2);
+  display: flex;
+  flex-direction: row;
+  padding-inline: 50px;
+  padding-block: 20px;
+  justify-content: space-between;
+  align-items: center;
+  gap: auto; /* посмотреть что будет, если что поменять */
+}
+
+.header_logo {
+  width: 32.23px;
+  height: 24px;
+}
+
+.header_nav {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 37px;
+}
+
+.hero-section {
+  background-image: url('');
 }
