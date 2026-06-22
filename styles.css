@@ -129,7 +129,7 @@ table {
 
 .hero-display {
   font-weight: 400;
-  font-size: 160px;
+  font-size: 120px;
   letter-spacing: -0,03em;
   line-height: 95%;
 
@@ -158,7 +158,9 @@ table {
 
 .header-1 {
   font-weight: 500;
-  font-size: 42px;
+  /* font-size: 42px; */
+  font-size: 32px;
+  color: var(--color-paragraphColor1);
   letter-spacing: -0,05em;
   line-height: 109%;
 }
@@ -177,7 +179,7 @@ table {
   line-height: 135%;
 }
 
-.paragraph1 {
+.paragraph-1 {
   font-weight: 400;
   font-size: 42px;
   letter-spacing: -0,05em;
@@ -186,7 +188,8 @@ table {
 
 .paragraph-2 {
   font-weight: 400;
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: 18px; /* поправил в писксели и стало хорошо */
   letter-spacing: -0,02em;
   line-height: 135%;
 }
@@ -214,45 +217,31 @@ table {
   других ссылок другие цвета */
 }
 
-@media (max-width: 1279) {
+/* переиспользуемые компоненты сайта - UI Kit */
 
-/*адаптив для текстовых стилей*/
-.hero-display {font-size: 96px;}
-
-.display-1 {font-size: 266px;}
-
-.display-2 {font-size: 112px;}
-
-.display-3 {font-size: 85px;}
-
-.header-2 {font-size: 26px;}
+.button-dark {
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  background-color: var(--color-accent);
+  /* border-radius: 25%; */
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-inline: 24px;
+  padding-block: 18px;
+}
+.button-dark:hover {
+  background-color: var(--color-background3);
+  transition-duration: 500ms;
 }
 
-@media (max-width: 799px) {
-
-/*адаптив для текстовых стилей*/
-.hero-display {font-size: 48px;}
-
-.display-1 {font-size: 133px;}
-
-.display-2 {font-size: 112px;}
-
-.display-3 {font-size: 48px;} /* одно свойство надо будет задать через маргин,
-смотреть в стиле текста на мобилке */
-
-.header-1 {font-size: 29px;}
-
-.header-2 {font-size: 26px;}
-
-.paragraph1 {font-size: 29px;}
-}
-
-/* КОМПОНЕНТЫ САЙТА включая шапку и тд*/
+/* Блоки сайта включая шапку и тд*/
 
 .header {
-  background-image: url();
+  height: 800px;
+  background-color: gray;
   width: 100%;
-  height: auto; /* может надо будет поменять */
   display: flex;
 }
 
@@ -282,6 +271,144 @@ table {
   gap: 37px;
 }
 
+.hero-section {/* костыль,  */
+  margin-top: 64px;
+  width: 100%;
+  display: flex;
+  align-items : end; /* надо проверить */
+  padding-inline: 50px;
+  /* padding-top: 25px; бесполезно, можно будет убрать */
+  padding-bottom: 70px;
+}
+
+.hero-section_contents {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  row-gap: 78px;
+}
+
+.hero-section_subcontents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.hero-paragraph-block {
+  width: 370px;
+}
+
+/* main styles */
+
+.main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.welcome-section {
+  width: 100%;
+  height: auto;
+  padding-top: 135px;
+  padding-bottom: 178px;
+  padding-left: 152px;
+  padding-right: 186px;
+  display: flex;
+
+}
+
+.welcome-section_contents {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+  justify-content: space-between;
+
+}
+
+.welcome-section_body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  align-items: start;
+  justify-content: space-between;
+
+}
+
+.welcome-section_paragraphs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 48px;
+  justify-items: start;
+  
+}
+
+.welcome_paragraph-wrapper {
+  width: 447px;
+  height: auto;
+}
+
+/* адаптив */
+
+@media (max-width: 1279px) {
+
+/*адаптив для текстовых стилей*/
+.hero-display {font-size: 72px;}
+/* .hero-display {font-size: 96px;} */
+
+.display-1 {font-size: 266px;}
+
+.display-2 {font-size: 112px;}
+
+.display-3 {font-size: 85px;}
+
+.header-2 {font-size: 26px;}
+
+.hero-section_subcontents { /* проверить потом все эти классы */
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+}
+
+@media (max-width: 799px) {
+
+/*адаптив для текстовых стилей*/
+/* .hero-display {font-size: 48px;} */
+.hero-display {font-size: 36px;}
+
+.display-1 {font-size: 133px;}
+
+.display-2 {font-size: 112px;}
+
+.display-3 {font-size: 48px;} /* одно свойство надо будет задать через маргин,
+смотреть в стиле текста на мобилке */
+
+.header-1 {font-size: 29px;}
+
+.header-2 {font-size: 26px;}
+
+.paragraph1 {font-size: 29px;}
+
 .hero-section {
-  background-image: url('');
+  padding-inline: 24px;
+}
+
+.hero-paragraph-block {
+  width: auto;
+}
+
+.hero-section_subcontents {
+  /* flex-direction: column;  */
+  gap: 16px;
+  align-items: start;
+
+}
 }
