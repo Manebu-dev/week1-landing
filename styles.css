@@ -164,6 +164,14 @@ table {
   letter-spacing: -0,05em;
   line-height: 109%;
 }
+.header-1--white {
+  font-weight: 500;
+  /* font-size: 42px; */
+  font-size: 32px;
+  color: var(--color-paragraphColor2);
+  letter-spacing: -0,05em;
+  line-height: 109%;
+}
 
 .header-2 {
   font-weight: 400;
@@ -193,6 +201,14 @@ table {
   letter-spacing: -0,02em;
   line-height: 135%;
 }
+.paragraph-2--white {
+  font-weight: 400;
+  /* font-size: 24px; */
+  font-size: 18px; /* поправил в писксели и стало хорошо */
+  letter-spacing: -0,02em;
+  line-height: 135%;
+  color: var(--color-paragraphColor2);
+}
 
 .paragraph-3 {
   font-weight: 400;
@@ -221,17 +237,30 @@ table {
 
 .button-dark {
   box-sizing: border-box;
-  width: auto;
-  height: auto;
   background-color: var(--color-accent);
-  /* border-radius: 25%; */
+  border-radius: 30px;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   padding-inline: 24px;
   padding-block: 18px;
 }
 .button-dark:hover {
+  background-color: var(--color-background3);
+  transition-duration: 500ms;
+}
+
+.button-dark--welcome_adaptive {/* клон кнопки под адаптивный стиль велком секции */
+  box-sizing: border-box;
+  background-color: var(--color-accent);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 24px;
+  padding-block: 18px;
+}
+.button-dark--welcome_adaptive:hover {
   background-color: var(--color-background3);
   transition-duration: 500ms;
 }
@@ -307,10 +336,11 @@ table {
   width: 100%;
   height: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .welcome-section {
+  background-color: var(--color-background1);
   width: 100%;
   height: auto;
   padding-top: 135px;
@@ -323,11 +353,19 @@ table {
 
 .welcome-section_contents {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   row-gap: 60px;
   justify-content: space-between;
 
+}
+
+.welcome-section_header-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: start;
 }
 
 .welcome-section_body {
@@ -343,10 +381,11 @@ table {
 
 .welcome-section_paragraphs {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   column-gap: 48px;
-  justify-items: start;
+  justify-content: start;
   
 }
 
@@ -354,6 +393,59 @@ table {
   width: 447px;
   height: auto;
 }
+
+.breaker-section {
+  background-color: var(--color-background3);
+  width: 100%;
+  height: 625px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offering-section {
+  background-color: var(--color-background2);
+  width: 100%;
+  height: 917px; /* maybe auto */
+  padding-block: 93px;
+  padding-left: 152px;
+}
+
+.offering-section_contents {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: start; /* может выравнить по-другому */
+  justify-content: start;
+}
+
+.offering-section_p {
+  width: auto;
+  padding-right: 74px;
+  display: flex;
+  justify-content: start;
+}
+
+.offering-list {
+  width: 100%;
+  height: auto; /* 100% maybe */
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+  justify-items: start;
+  align-items: start;
+}
+
+.offering-list_items {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-items: start;
+}
+/* надо переработать шрифты */
 
 /* адаптив */
 
@@ -376,6 +468,18 @@ table {
   justify-content: start;
   align-items: start;
 }
+
+.welcome-section {
+  padding-inline: 64px;
+}
+
+.welcome_paragraph-wrapper {
+  width: 100%;
+}
+
+.breaker-section {
+  height: 480px;
+}
 }
 
 @media (max-width: 799px) {
@@ -397,6 +501,8 @@ table {
 
 .paragraph1 {font-size: 29px;}
 
+.button-dark--welcome_adaptive {width: 100%;}
+
 .hero-section {
   padding-inline: 24px;
 }
@@ -409,6 +515,24 @@ table {
   /* flex-direction: column;  */
   gap: 16px;
   align-items: start;
+}
 
+.welcome-section {
+  padding-inline: 24px;
+  padding-top: 48px;
+  padding-bottom: 80px;
+}
+
+.welcome-section_contents {
+  row-gap: 40px;
+}
+
+.welcome-section_paragraphs {
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.breaker-section {
+  height: 280px;
 }
 }
